@@ -1,0 +1,11 @@
+caseNum,apiType,apiNum,apiName,priority,url,function,purpose,parameter,parameter2,parameter3,parameter4,parameter5,expectValue
+C001,班车api,driverlogin_01,driverlogin,H,shuttle_trip/driver/login,POST,正确参数,{"driver_mobile":"13345678889","password":"962808"},,,,"status":"SUCCESS",
+C002,班车api,driverlogin_02,driverlogin,H,shuttle_trip/driver/login,POST,异常参数,{"driver_mobile":"13345678811","password":"961108"},,,,"status":"FAIL",
+C003,班车api,driverlogin_03,driverlogin,H,shuttle_trip/driver/login,POST,driver_mobile为空,{"driver_mobile":"","password":"962808"},,,,"status":"FAIL",
+C004,班车api,driverlogin_04,driverlogin,L,shuttle_trip/driver/login,POST,password为空,{"driver_mobile":"13345678889","password":""},,,,"status":"FAIL",
+C005,班车api,route_01,route,H,shuttle_trip/route/SVW,GET,正确参数,,,,,,"status":"SUCCESS",
+C006,班车api,route_02,route,H,shuttle_trip/route/TOYOTA,GET,cocode不存在,,,,,,"status":"FAIL",
+C007,班车api,track/b01,track/b,H,/shuttle_track/b/24,GET,正确参数,,,,,,"status":"SUCCESS",
+C008,班车api,track/b02,track/b,H,/shuttle_track/b/11,GET,trip_id不存在,,,,,,"status":"FAIL",
+C009,班车api,nearby_01,nearby,H,/shuttle_trip/trip/nearby,POST,正确参数,{"start_time":"2017-06-30"},,,,,"status":"SUCCESS",
+C010,班车api,nearby_02,nearby,H,/shuttle_trip/trip/nearby,POST,正确参数,{"start_time":"2017-06-30","start_longitude":121.5249519800,"start_latitude":31.2761409600,"stop_longitude":121.4765083000,"stop_latitude":31.2951246000},"status":"SUCCESS",
