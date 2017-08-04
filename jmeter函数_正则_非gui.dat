@@ -1,0 +1,55 @@
+
+#-------------------正则表达式-----------//
+"batch":"(.*?)"
+$1$
+0
+ERRO
+如果response返回多个循环+{}
+如租车创建订单
+{"orderId":(.+?)}
+
+//----------------------------------------函数助手-------------------------------//
+#函数读取数据
+{
+	"driver_mobile": "${__CSVRead(D:\datasource\data.dat,0)}",
+	"password": "${__CSVRead(D:\datasource\data.dat,1)}"
+}
+#随机数函数 ps：长度11
+${__Random(1,1000000023,_Random)}
+#计数器函数自增1
+${__counter(FALSE,test)}
+
+#时间函数
+${__time(,)}         1450056496991 //无格式化参数，返回当前毫秒时间  
+${__time(yyyyMMdd,)} 20151214      //返回年月日  
+${__time(HHmmss,)}   092816        //返回时分秒  
+${__time(yyyyMMdd-HHmmss,)} 20151214-092816 //全
+
+#非gui运行测试jmx生成报告-----------------------------------------------------------------------------------
+#命令格式
+-n 非 GUI 模式 -> 在非 GUI 模式下运行 JMeter 
+ -t 测试文件 -> 要运行的 JMeter 测试脚本文件  -l 日志文件 -> 记录结果的文件  -r 远程执行 -> 启动远程服务   -H 代理主机 -> 设置 JMeter 使用的代理主机   -P 代理端口 -> 设置 JMeter 使用的代理主机的端口号
+
+jmeter -n -t <test JMX file> -l <log file> -e -o <Path to output folder>
+jmeter -n -t E:\apache-jmeter-3.0\script\test.jmx -l LogFile -e -o ./report
+
+jmeter -n -t C:\Users\jason\Desktop\project\interface\订单.jmx -l testLogFile -e -o D:\jmeter_report\test4
+
+
+jmeter -n -t D:\git\jmeterDemo\scriptDemo\test.jmx -l testLogFile -e -o D:\jmeter_report\test1
+
+jmeter -n -t C:\Users\jason\Desktop\project\登录.jmx -l testLogFile3 -e -o D:\jmeter_report\login100
+
+jmeter -n -t D:\PP_1.2\PP_interface1.2\performance\updateGis_基准.jmx -l testLog001 -e -o D:\jmeter_report\performance\updateGis_基准
+
+
+//-----------------------------------------------------------------------------------------------------------------//
+jmeter -n -t /home/test/script/aliyun/shareTripPass_addTrip_100.jmx -l testLog055 -e -o /home/test/jmeter_report/aliyun_shareTripPass_addTrip_100_05101355
+
+
+jmeter -n -t /home/test/script/login_prd_100.jmx -l testLog00001 -e -o /home/test/jmeter_report/prd/login_prd_100_05101947
+
+jmeter -n -t /home/test/script/prd/login_prd_100.jmx -l testlog11000021 -e -o /home/test/jmeter_report/prd/login_prd_100_051111648
+
+jmeter -n -t /home/test/script/aliyun/configure-controller.jmx -l testlog20170119 -e -o /home/test/jmeter_report/configure-controller_0719
+
