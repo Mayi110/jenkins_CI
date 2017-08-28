@@ -90,7 +90,7 @@ D:\project\班车V1.0\Shuttle_bus\ShuttleBus_interface\11.csv
         </LoopController>
         <hashTree>
           <IfController guiclass="IfControllerPanel" testclass="IfController" testname="执行用例" enabled="true">
-            <stringProp name="IfController.condition">&quot;${priority}&quot;==&quot;L&quot;</stringProp>
+            <stringProp name="IfController.condition">&quot;${priority}&quot;==&quot;H&quot;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
           </IfController>
           <hashTree>

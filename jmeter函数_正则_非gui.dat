@@ -49,7 +49,10 @@ jmeter -n -t /home/test/script/aliyun/shareTripPass_addTrip_100.jmx -l testLog05
 
 jmeter -n -t /home/test/script/login_prd_100.jmx -l testLog00001 -e -o /home/test/jmeter_report/prd/login_prd_100_05101947
 
-jmeter -n -t /home/test/script/prd/login_prd_100.jmx -l testlog11000021 -e -o /home/test/jmeter_report/prd/login_prd_100_051111648
+jmeter -n -t /home/test/script/pre/updateGis_a.jmx -l testlog11000022 -e -o /home/test/script/pre/updateGis_a170809
+#-----------------------------jtl文件生成report-------------------------------------------//
+jmeter -n -t /home/test/script/pre/login.jmx -l testlog2017080821 -e -o /home/test/script/pre/login_17080821
 
-jmeter -n -t /home/test/script/aliyun/configure-controller.jmx -l testlog20170119 -e -o /home/test/jmeter_report/configure-controller_0719
+
+
 
